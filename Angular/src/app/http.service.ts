@@ -7,8 +7,6 @@ import { Injectable } from '@angular/core';
 
 export class HttpService {
   constructor(private _http: HttpClient) { 
-    this.getTasks();
-    this.getTaskbyId('61b00af65e6c3d8fadbb5bcf');
   }
   
   getTasks(){
