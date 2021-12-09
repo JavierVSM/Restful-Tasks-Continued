@@ -9,7 +9,7 @@ import { HttpService } from './http.service';
 
 export class AppComponent implements OnInit {
   tasks: any[] = [];
-  taskDetail: any[] = [];
+  taskDetail: any = {};
 
   constructor(private _httpService: HttpService){}
   
@@ -26,9 +26,11 @@ export class AppComponent implements OnInit {
   }
 
   getTasksByID(){
-    this._httpService.getTasks()
+    let id='61b00af65e6c3d8fadbb5bcf';
+    this._httpService.getTaskbyId(id)
     .subscribe((data:any)=>{
-      this.taskDetail = data;          
+      this.taskDetail = data;   
+      console.log ("EEEEEEE",this.taskDetail);       
     });
   }
 }
