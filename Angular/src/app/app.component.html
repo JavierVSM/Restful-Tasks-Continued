@@ -9,8 +9,8 @@
 </div>
 
 <h1>The third task:</h1>
-<div *ngFor = "let taskData of taskDetail">
+<div *ngIf = "taskDetail">
     <ul>
-        <li>{{taskData.title}} - {{taskData.description}}</li>
+        <li>{{taskDetail.title}} - {{taskDetail.description}}</li>
     </ul>
 </div>
